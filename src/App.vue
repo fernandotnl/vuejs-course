@@ -4,8 +4,10 @@
 
 <script>
 export default {
-  data:{
-    status: 'Critical'
+  data() {
+    return {
+      status: 'Critical'
+    };
   }
 }
 </script>
