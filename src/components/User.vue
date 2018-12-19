@@ -27,7 +27,7 @@
         },
         methods: {
             changeName(){
-                this.name = this.name === 'Fernando' ? 'Bruna': 'Fernando';
+                this.name = 'Bruna';//this.name === 'Fernando' ? 'Bruna': 'Fernando';
             }
         },
         components: {
