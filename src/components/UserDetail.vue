@@ -4,6 +4,7 @@
         <p>Many Details</p>
         <p>User Name: {{reverseName()}}</p>
         <button @click="resetName"> Reset name </button>
+        <button @click="resetNameFromParent()"> Reset name parent </button>
     </div>
 </template>
 
@@ -13,7 +14,8 @@
             name: {
                 type: String,
                 required: true
-            }
+            },
+            resetNameFromParent: Function
         },
         methods: {
             reverseName(){
@@ -21,6 +23,7 @@
             },
             resetName(){
                 this.name = 'Fernando';
+                this.$emit('nameWasChanged', this.name);
             }
         }
     }
