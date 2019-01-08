@@ -11,10 +11,11 @@
                     :name="name"
                     @nameWasChanged="name = $event"
                     :resetNameFromParent="resetName"
+                    :userAge="age"
                     ></app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <app-user-edit></app-user-edit>
+                <app-user-edit :userAge="age"></app-user-edit>
             </div>
         </div>
     </div>
@@ -27,7 +28,8 @@
     export default {
         data(){
             return {
-                name: 'Fernando'
+                name: 'Fernando',
+                age: 27
             }
         },
         methods: {
