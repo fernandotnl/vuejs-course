@@ -18,7 +18,7 @@
                         <input
                                 type="password"
                                 id="password"
-                                v-model="userData.password"
+                                v-model.lazy="userData.password"
                                 class="form-control">
                     </div>
                     <div class="form-group">
@@ -39,6 +39,7 @@
                     <textarea
                             id="message"
                             rows="5"
+                            v-model="message"
                             class="form-control"></textarea>
                 </div>
             </div>
@@ -107,7 +108,7 @@
                         <p>Mail: {{ userData.email }}</p>
                         <p>Password: {{ userData.password }}</p>
                         <p>Age: {{ userData.age }}</p>
-                        <p>Message: </p>
+                        <p>Message: {{ message }} </p>
                         <p><strong>Send Mail?</strong></p>
                         <ul>
                             <li></li>
@@ -130,7 +131,8 @@
             email: '',
             password: '',
             age: 27
-          }
+          },
+          message: "A new text"
         }
       }
     }
