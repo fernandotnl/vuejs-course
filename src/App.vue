@@ -10,7 +10,8 @@
                         <input
                                 type="text"
                                 id="email"
-                                v-model="userData.email"
+                                :value="userData.email"
+                                @input="userData.email = $event.target.value"
                                 class="form-control">
                     </div>
                     <div class="form-group">
