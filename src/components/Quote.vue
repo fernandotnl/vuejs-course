@@ -1,6 +1,12 @@
 <template>
   <div>
-    <slot></slot>
+    <div class="title">
+       <slot></slot>
+    </div>
+    <hr>
+    <div>
+      <slot></slot>
+    </div>
   </div>
 </template>
 <script>
