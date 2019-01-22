@@ -9,12 +9,15 @@
         <ul>
           <li :key="fruit" v-for="fruit in filteredFruits"> {{ fruit }}</li>
         </ul>
+        <hr>
+        <app-list></app-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import List from './List.vue';
 export default {
   data(){
     return {
@@ -34,6 +37,9 @@ export default {
         return element.match(this.filterText);
       })
     }
+  },
+  components:{
+    appList: List
   }
 }
 </script>
